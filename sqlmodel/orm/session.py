@@ -85,7 +85,7 @@ class Session(_Session):
         ident: Any,
         options: Optional[Sequence[Any]] = None,
         populate_existing: bool = False,
-        with_for_update: Optional[_ForUpdateArg] = None,
+        with_for_update: Union[_ForUpdateArg, None, bool, Dict[str, Any]] = None,
         identity_token: Optional[Any] = None,
         execution_options: Mapping[Any, Any] = util.EMPTY_DICT,
         bind_arguments: Optional[Dict[str, Any]] = None,
